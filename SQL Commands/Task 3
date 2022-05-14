@@ -1,0 +1,18 @@
+SELECT DisplayName, QuestionsNumber, AnswersNumber
+FROM
+(
+SELECT COUNT(*) as AnswersNumber, Users.DisplayName, Users.Id
+FROM Users JOIN Posts ON Users.Id = Posts.OwnerUserId
+WHERE Posts.PostTypeId = 1
+GROUP BY Users.Id
+) AS Tab1
+JOIN
+(
+SELECT COUNT(*) as QuestionsNumber, Users.Id
+FROM Users JOIN Posts ON Users.Id = Posts.OwnerUserId
+WHERE Posts.PostTypeId = 2
+GROUP BY Users.Id
+) AS Tab2
+ON Tab1.Id = Tab2.Id
+WHERE QuestionsNumber < AnswersNumber
+ORDER BY AnswersNumber DESC
