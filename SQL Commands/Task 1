@@ -1,0 +1,4 @@
+SELECT TagName, Count
+FROM Tags
+ORDER BY Count DESC
+LIMIT 10
