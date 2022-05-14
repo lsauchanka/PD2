@@ -1,0 +1,9 @@
+SELECT Users.DisplayName, Users.Age, Users.Location,
+AVG(Posts.Score) as PostsMeanScore,
+MAX(Posts.CreationDate) AS LastPostCreationDate
+FROM Posts
+JOIN Users ON Users.AccountId=Posts.OwnerUserId
+WHERE OwnerUserId != -1
+GROUP BY OwnerUserId
+ORDER BY PostsMeanScore DESC
+LIMIT 10
