@@ -1,0 +1,16 @@
+SELECT
+Posts.Title, Posts.CommentCount,
+CmtTotScr.CommentsTotalScore,
+Posts.ViewCount
+FROM (
+SELECT
+PostID,
+UserID,
+SUM(Score) AS CommentsTotalScore
+FROM Comments
+GROUP BY PostID, UserID
+) AS CmtTotScr
+JOIN Posts ON Posts.ID=CmtTotScr.PostID
+WHERE Posts.PostTypeId=1
+ORDER BY CmtTotScr.CommentsTotalScore DESC
+LIMIT 10
