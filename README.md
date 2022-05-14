@@ -5,7 +5,7 @@ Folder SQL Commands zawiera polecenia w języku SQL.
 
 Folder Code zawiera pliki rozszerzenia .R, które są rozwiązaniami podanych poleceń SQL. 
 
-Folder Data Frames zawiera ramki dannych z serwisu https://travel.stackexchange.com/: Tags, Posts, Users, Comments.  
+Folder Data Frames zawiera ramki dannych z serwisu https://travel.stackexchange.com/: Tags, Posts, Users, Comments (rozszerzenie plików .csv). 
 
 Plik Raport.pdf omawia każdy sposób implementacji, sprawdza równowaznosci wyników, mierzy i ocenia czas wykonania funkcji.
 
@@ -17,6 +17,6 @@ The SQL Commands folder contains commands in SQL.
 
 The Code folder contains files .R, which are solutions to the given SQL commands.
 
-The Data Frames folder contains data frames from the service https://travel.stackexchange.com/: Tags, Posts, Users, Comments.
+The Data Frames folder contains data frames from the service https://travel.stackexchange.com/: Tags, Posts, Users, Comments (extension of files is .csv).
 
 File Raport.pdf discusses each way of implementation, checks the correctness of results, measures and evaluates the time of execution of functions.
